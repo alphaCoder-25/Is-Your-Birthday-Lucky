@@ -12,10 +12,18 @@ function calaculateSum(dob){
     return sum;
 }
 
+function compareValues(sum, luckyNumber){
+    if(sum % luckyNumber === 0 ){
+        console.log("Your Birthday is Lucky🎉");
+    } else {
+        console.log("Your Birthday is not Lucky🤕")
+    }
+};
+
 function checkBirthDateIsLucky(){
     const dob = dateOfBirth.value;
     const sum = calaculateSum(dob);
-    console.log(sum);
+    compareValues(sum,luckyNumber.value);
 }
 
 checkNumber.addEventListener("click", checkBirthDateIsLucky);
